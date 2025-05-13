@@ -1,0 +1,41 @@
+{
+  "name": "aws-sample-apigw-ws-api",
+  "version": "0.1.0",
+  "bin": {
+    "aws-sample-apigw-ws-api": "bin/aws-sample-apigw-ws-api.js"
+  },
+  "author": {
+    "name": "Fawad Mazhar",
+    "url": "https://github.com/fawad1985"
+  },
+  "keywords": [
+    "aws",
+    "serverless",
+    "api",
+    "websocket"
+  ],
+  "scripts": {
+    "install": "cd functions && npm install",
+    "bootstrap:dev": "cdk bootstrap -v --profile {aws_profile} --context stage=dev",
+    "synth:dev": "npx cdk -v --profile {aws_profile} synth sample-apigw-ws-dev",
+    "diff:dev": "npx cdk -v --profile {aws_profile} diff sample-apigw-ws-dev",
+    "deploy:dev": "npm run synth:dev && npx cdk -v --profile {aws_profile} deploy sample-apigw-ws-dev",
+    "destroy:dev": "npx cdk -v --profile {aws_profile} destroy sample-apigw-ws-dev"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "22.7.9",
+    "aws-cdk": "2.1014.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.3"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2-alpha": "^2.114.1-alpha.0",
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.114.1-alpha.0",
+    "aws-cdk-lib": "2.194.0",
+    "constructs": "^10.0.0",
+    "esbuild": "^0.19.10"
+  }
+}

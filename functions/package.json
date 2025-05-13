@@ -1,0 +1,20 @@
+{
+  "name": "sample-apigw-ws-functions",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@aws-sdk/client-apigatewaymanagementapi": "^3.806.0",
+    "@aws-sdk/client-dynamodb": "^3.332.0",
+    "@aws-sdk/util-dynamodb": "^3.332.0",
+    "aws-lambda": "^1.0.7"
+  },
+  "devDependencies": {
+    "@aws-sdk/types": "^3.329.0",
+    "@types/aws-lambda": "^8.10.96"
+  }
+}
